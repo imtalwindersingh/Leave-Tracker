@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   cardHeading: { fontSize: 24, fontWeight: "600" },
-  profileImg: { width: 100, height: 100, borderRadius: 100 },
+  profileImg: { width: wp(30), height: wp(30), borderRadius: 100 },
   card: {
     alignSelf: "stretch",
     borderRadius: 20,

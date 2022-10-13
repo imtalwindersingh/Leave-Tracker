@@ -8,6 +8,7 @@ import { newRequestAction } from "../../../redux/slices/common";
 import Card from "./../../../../assets/shapes/CurvedGround.svg";
 import s from "./styles";
 import { colors } from "../../../theme/Colors";
+import { hp, wp } from "../../../utils/Helpers";
 const URI =
   "https://i.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U";
 const NewRequestStep2 = (props: { navigation: { goBack: () => void } }) => {
@@ -125,7 +126,7 @@ const NewRequestStep2 = (props: { navigation: { goBack: () => void } }) => {
             <Card
               preserveAspectRatio="YMin slice"
               width={"100%"}
-              height={700}
+              height={wp(160)}
             />
             <View style={s.cardSub}>
               <Text style={s.heading}>New Request</Text>

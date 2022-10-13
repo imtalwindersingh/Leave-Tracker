@@ -1,6 +1,6 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import React, { useState } from "react";
-import { wp } from "../../../utils/Helpers";
+import { hp, wp } from "../../../utils/Helpers";
 import { LinearGradient } from "expo-linear-gradient";
 import { Screens } from "../../../config/keys";
 import { useSelector } from "react-redux";
@@ -47,7 +47,7 @@ const NewRequestStep1 = (props: { navigation: any }) => {
             <Card
               preserveAspectRatio="YMin slice"
               width={"100%"}
-              height={700}
+              height={wp(160)}
             />
             <View style={s.cardSub}>
               <Text style={s.heading}>New Request</Text>
@@ -164,20 +164,19 @@ const NewRequestStep1 = (props: { navigation: any }) => {
               </TouchableOpacity>
               <View style={s.underline} />
 
-              <LinearGradient
-                // Button Linear Gradient
-                colors={["#F1D470", "#E08F4C"]}
-                style={s.buttonGradientContainer}
-                start={[0.0, 0.5]}
-                end={[1.0, 0.5]}
+              <TouchableOpacity
+                onPress={handleSubmission}
+                style={s.submitButton}
               >
-                <TouchableOpacity
-                  onPress={() => props.navigation.goBack()}
-                  style={s.submitButton}
+                <LinearGradient
+                  // Button Linear Gradient
+                  colors={["#F1D470", "#E08F4C"]}
+                  start={[0.0, 0.5]}
+                  end={[1.0, 0.5]}
                 >
-                  <Text style={s.submitButtonTitle}>Confirm</Text>
-                </TouchableOpacity>
-              </LinearGradient>
+                  <Text style={s.submitButtonTitle}>Select</Text>
+                </LinearGradient>
+              </TouchableOpacity>
             </View>
           </View>
         </View>

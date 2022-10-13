@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import { TextStyles } from "../../../theme/TextStyles";
-import { wp } from "../../../utils/Helpers";
+import { hp, wp } from "../../../utils/Helpers";
 
 const styles = StyleSheet.create({
   container: {
@@ -10,18 +10,18 @@ const styles = StyleSheet.create({
   subContainer: {
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 20,
+    marginTop: hp(2),
   },
   heading: {
     ...TextStyles.h2,
     fontWeight: "600",
     marginBottom: 30,
   },
-  profileImg: { width: 100, height: 100, borderRadius: 100 },
+  profileImg: { width: wp(30), height: wp(30), borderRadius: 100 },
   card: {
     alignSelf: "stretch",
     borderRadius: 20,
-    marginTop: -25,
+    marginTop: -hp(3),
     overflow: "hidden",
   },
   cardSub: {
@@ -29,8 +29,8 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    top: 25,
-    padding: 25,
+    top: hp(4),
+    padding: wp(6),
     justifyContent: "center",
   },
 
@@ -38,15 +38,15 @@ const styles = StyleSheet.create({
   submitButton: {
     alignItems: "center",
     alignSelf: "flex-end",
-    marginTop: 40,
+    marginTop: wp(10),
     borderRadius: 20,
     overflow: "hidden",
   },
   submitButtonTitle: {
     color: "white",
-    padding: 20,
+    padding: wp(5),
     paddingHorizontal: 50,
   },
-  calenderContainer: { height: wp(100) },
+  calenderContainer: { height: hp(40) },
 });
 export default styles;
